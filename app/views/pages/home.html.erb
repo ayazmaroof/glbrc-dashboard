@@ -1,5 +1,10 @@
 <% if user_signed_in? %>
   <h1>Welcome, <%= current_user.email %></h1>
+  <div id="app_links">
+    <% @app_links.each do |app_link| %>
+      <%= render app_link %>
+    <% end %>
+  </div>
   <%= link_to 'Sign out', destroy_user_session_path, data: { turbo_method: :delete} %>
 <% else %>
   <h1>Home</h1>

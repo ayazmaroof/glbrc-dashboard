@@ -1,18 +1,19 @@
-<% if user_signed_in? %>
-  <h1>Welcome, <%= current_user.email %></h1>
-  <div id="app_links">
-    <div class="container">
-      <div class="row row-cols-4 g-4">
-        <% @app_links.each do |app_link| %>
-          <div class="col">
-            <%= render app_link %>
-          </div>
-        <% end %>
+<div class="container text-center py-4">
+  <% if user_signed_in? %>
+    <h1>Welcome, <%= current_user.username %></h1>
+    <div id="app_links">
+      <div class="container py-5">
+        <div class="row row-cols-4 g-4">
+          <% @app_links.each do |app_link| %>
+            <div class="col">
+              <%= render app_link %>
+            </div>
+          <% end %>
+        </div>
       </div>
     </div>
-
-  </div>
-<% else %>
-  <h1>Home</h1>
-  <%= link_to 'Sign in', new_user_session_path %>
-<% end %>
+  <% else %>
+    <h1>Home</h1>
+    <%= link_to 'Sign in', new_user_session_path %>
+  <% end %>
+</div>

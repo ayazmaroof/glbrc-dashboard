@@ -1,0 +1,9 @@
+<div class="card h-100 text-center" id="<%= dom_id app_link %>">
+  <div class="card-body">
+    <h5 class="card-title"><%= app_link.name %></h5>
+    <h6 class="card-subtitle mb-2 text-body-secondary"><%= app_link.description %></h6>
+  </div>
+  <div class="card-footer">
+    <%= link_to "Launch App", app_link.link, target: "_blank", class: "btn btn-outline-primary" %>
+  </div>
+</div>

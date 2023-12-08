@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   devise_for :users, controllers: { registrations: 'users/registrations' }
   root 'pages#home'
   get 'pages/home'
+  get 'user-app-links/add' => 'user_app_links#index', as: :user_app_link_add
+  post 'user_app_links', action: :create, controller: 'user_app_links'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.

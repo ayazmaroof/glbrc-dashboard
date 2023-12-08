@@ -38,11 +38,39 @@
    link: 'https://energy.wisc.edu/'
  },
  {
-   name: 'X',
-   description: 'X (formerly known as Twitter)',
+   name: 'X (formerly know as Twitter)',
+   description: 'Microblogging platform',
    color: 'purple',
    default_status: false,
    link: 'https://twitter.com/'
+ },
+ {
+   name: 'Ruby on Rails',
+   description: 'Web Application Framework',
+   color: 'red',
+   default_status: false,
+   link: 'https://rubyonrails.org/'
+ },
+ {
+   name: 'Vue.js',
+   description: 'Front-end JavaScript Framework',
+   color: 'green',
+   default_status: false,
+   link: 'https://vuejs.org/'
+ },
+ {
+   name: 'City of Madison',
+   description: 'Madison City Government',
+   color: 'blue',
+   default_status: false,
+   link: 'https://www.cityofmadison.com/'
+ },
+ {
+   name: 'Henry Vilas Zoo',
+   description: 'Henry Vilas Zoo Homepage',
+   color: 'blue',
+   default_status: false,
+   link: 'https://www.henryvilaszoo.gov/'
  }].each do |app_link|
   AppLink.create(app_link)
 end

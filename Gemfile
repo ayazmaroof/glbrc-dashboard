@@ -11,6 +11,10 @@ gem "sprockets-rails"
 # Use pg as the database for Active Record
 gem 'pg'
 
+gem 'bootstrap', '~> 5.3.2'
+
+gem 'dartsass-sprockets'
+
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", ">= 5.0"
 

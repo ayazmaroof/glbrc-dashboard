@@ -3,13 +3,17 @@
 </div>
 
 <div class="container">
-  <%= form_with url:'/user_app_links', method: :post do | form | %>
-    <%= form.collection_check_boxes :app_links_ids, @app_links, :id, :name do |app| %>
-      <div class="collection-check-box form-check">
-        <%= app.check_box :class => "form-check-input" %>
-        <%= app.label :class => "form-check-label" %>
-      </div>
+  <% if @app_links.empty? %>
+    You have already added all the available apps.
+  <% else %>
+    <%= form_with url: '/user_app_links', method: :post do |form| %>
+      <%= form.collection_check_boxes :app_links_ids, @app_links, :id, :name do |app| %>
+        <div class="collection-check-box form-check">
+          <%= app.check_box :class => "form-check-input" %>
+          <%= app.label :class => "form-check-label" %>
+        </div>
+      <% end %>
+      <%= form.submit "Save", class: "btn btn-primary" %>
     <% end %>
-    <%= form.submit "Save", class: "btn btn-primary" %>
   <% end %>
 </div>

@@ -1,24 +1,19 @@
-# README
+# GLBRC Dashboard
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Recommended setup
+Ruby version: 3.2.x
 
-Things you may want to cover:
+Rails version: 7.1.x
 
-* Ruby version
+## Requirements
+Please ensure that you have postgres install on your machine in order to run this project.
+For my development environment I used Postgres 14.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Running the application locally
+In order to run this app locally:
+* Clone the repo
+* Run `bundle install`
+* Run `rake db:create` to create the database
+* Run `rake db:migrate` to run the migrations
+* Run `rake db:seed` to seed the DB with initial data
+* You should be able to start the app with `rails s` command
